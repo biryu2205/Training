@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: at.chrl:chrl-orm-spring-integration:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/chrl/chrl-orm-spring-integration/unknown/chrl-orm-spring-integration-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/at/chrl/chrl-orm-spring-integration/unknown/chrl-orm-spring-integration-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/at/chrl/chrl-orm-spring-integration/unknown/chrl-orm-spring-integration-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
