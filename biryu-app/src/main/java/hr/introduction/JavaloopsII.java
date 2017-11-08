@@ -1,7 +1,6 @@
 package hr.introduction;
 
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
 
 public class JavaloopsII {
   public static void main(String[] argh) {

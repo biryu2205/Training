@@ -1,6 +1,6 @@
 package hr.introduction;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class JavaStdinAndStdoutI {
   public static void main(String[] args) {

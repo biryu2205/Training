@@ -1,6 +1,7 @@
 package hr.introduction;
-import java.util.*;
-import java.security.*;
+
+import java.security.Permission;
+import java.util.Scanner;
 
 public class JavaIntToString {
   public static void main(String[] args) {
