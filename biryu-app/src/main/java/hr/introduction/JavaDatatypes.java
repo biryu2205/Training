@@ -9,29 +9,29 @@ public class JavaDatatypes {
     int t = sc.nextInt();
 
     for (int i = 0; i < t; i++) {
-
       try {
         long x = sc.nextLong();
-        System.out.println(x + " can be fitted in:");
-        if (x >= -128 && x <= 127) System.out.println("* byte");
-        if (x >= Short.MIN_VALUE && x <=
-
-            Short.MAX_VALUE) {
-          System.out.println("* short");
-        }
-        if (x >= Integer.MIN_VALUE && x <=
-
-            Integer.MAX_VALUE) {
-          System.out.println("* int");
-        }
-        if (x >= Long.MIN_VALUE && x <= Long.MAX_VALUE
-
-            ) {
-          System.out.println("* long");
-        }
+        System.out.println(String.format("%d can be fitted in: %s", x, typeOfX(x)));
       } catch (Exception e) {
         System.out.println(sc.next() + " can't be fitted anywhere.");
       }
     }
+  }
+
+  // test this function with value of x.
+  static String typeOfX(Long x) {
+    if (x >= -128 && x <= 127) {
+      return "byte";
+    }
+
+    if (x >= Short.MIN_VALUE && x <= Short.MAX_VALUE) {
+      return "short";
+    }
+
+    if (x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE) {
+      return "int";
+    }
+
+    return "long";
   }
 }
