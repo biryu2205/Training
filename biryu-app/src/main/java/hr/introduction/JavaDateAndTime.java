@@ -1,31 +1,50 @@
 package hr.introduction;
 
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.util.Scanner;
+import java.util.*;
 
 public class JavaDateAndTime {
+  public static String getDay(String day, String month, String year) {
+        /*
+        * Write your code here.
+        */
+    Calendar c = Calendar.getInstance();
+    c.set(Integer.valueOf(year), Integer.valueOf(month) - 1, Integer.valueOf(day));
+    String dayOfWeek = "";
+
+    switch (c.get(Calendar.DAY_OF_WEEK)) {
+      case 1:
+        dayOfWeek = "Sunday";
+        break;
+      case 2:
+        dayOfWeek = "Monday";
+        break;
+      case 3:
+        dayOfWeek = "Tuesday";
+        break;
+      case 4:
+        dayOfWeek = "Wednesday";
+        break;
+      case 5:
+        dayOfWeek = "Thursday";
+        break;
+      case 6:
+        dayOfWeek = "Friday";
+        break;
+      case 7:
+        dayOfWeek = "Saturday";
+        break;
+    }
+
+    return dayOfWeek.toUpperCase();
+  }
+
   public static void main(String[] args) {
-        /* Read input */
-    Scanner scanner = new Scanner(System.in);
-    double payment = scanner.nextDouble();
-    scanner.close();
+    Scanner in = new Scanner(System.in);
+    String month = in.next();
+    String day = in.next();
+    String year = in.next();
 
-        /* Create custom Locale for India.
-          I used the "IANA Language Subtag Registry" to find India's country code */
-    Locale indiaLocale = new Locale("en", "IN");
-
-        /* Create NumberFormats using Locales */
-    NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
-    NumberFormat india = NumberFormat.getCurrencyInstance(indiaLocale);
-    NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
-    NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
-
-        /* Print output */
-    System.out.println("US: " + us.format(payment));
-    System.out.println("India: " + india.format(payment));
-    System.out.println("China: " + china.format(payment));
-    System.out.println("France: " + france.format(payment));
+    System.out.println(getDay(day, month, year));
   }
 }
-
